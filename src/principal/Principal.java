@@ -8,9 +8,7 @@ import model.Pessoa;
 public class Principal {
 
 	public static void main(String[] args) {
-
 		menu();
-
 	}
 
 	public static void menu() {
@@ -24,11 +22,11 @@ public class Principal {
 
 		Scanner scan = new Scanner(System.in);
 
-		int i = scan.nextInt();
-		scan.nextLine();
+		int i = scan.nextInt();scan.nextLine();
 
 		PessoaDAO pessoaDAO = new PessoaDAO();
 		Pessoa pessoa = new Pessoa();
+		
 		switch (i) {
 
 		case 1:
@@ -36,7 +34,6 @@ public class Principal {
 			String nome = scan.nextLine();
 			System.out.println("Informe o CPF da pessoa");
 			String cpf = scan.nextLine();
-
 			pessoaDAO.inserir(new Pessoa(nome, cpf));
 			menu();
 			break;
@@ -49,7 +46,6 @@ public class Principal {
 			String nome1 = scan.nextLine();
 			System.out.println("informe o cpf a ser modificado");
 			String cpf1 = scan.nextLine();
-
 			pessoa.setNome(nome1);
 			pessoa.setCpf(cpf1);
 			pessoa.setId(id);
@@ -71,6 +67,7 @@ public class Principal {
 			}
 			menu();
 			break;
+			
 		case 5:
 			System.out.println("Fim");
 			System.exit(0);
