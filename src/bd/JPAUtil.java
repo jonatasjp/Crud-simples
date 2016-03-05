@@ -10,7 +10,6 @@ public class JPAUtil {
 	private static EntityManager em = null;
 	
 	private static EntityManagerFactory getEntityManagerFactory(){
-		
 		if(emf == null){
 			emf = Persistence.createEntityManagerFactory("crud");
 		}
